@@ -1,0 +1,21 @@
+{
+  "name": "favicons",
+  "version": "1.0.0",
+  "author": "Webcbg <bryan.colosky@webcbg.com>",
+  "homepage": "http://studiocraft.cc",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "private": true,
+  "license": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "favicons": "latest",
+    "gulp": "latest"
+  }
+}

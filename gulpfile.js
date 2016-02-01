@@ -1,36 +1,29 @@
 'use strict';
 
 var gulp = require('gulp'),
-    favicons = require('favicons');
-
+    favicons = require("gulp-favicons");
 
 var icons = (function() {
     return {
         compile: function(config) {
-            return favicons({
-                files: {
-                    src: 'assets/' + config.src + 'favicon.src.png',
-                    dest: 'assets/' + config.dest,
-                    html: config.html,
-                    iconsPath: 'assets/' + config.path,
-                },
-                icons: {
-                    android: true,
-                    appleIcon: true,
-                    appleStartup: true,
-                    coast: true,
-                    favicons: true,
-                    firefox: true,
-                    opengraph: true,
-                    windows: true,
-                    yandex: true
-                },
-                  settings: {
-                      background: config.background,
-                      logging: true
-                  },
-                favicon_generation: null,
-            });
+          gulp.src('assets/' + config.src + 'favicon.src.png')
+              .pipe(favicons({
+                  appName: "My Favicons",
+                  appDescription: "These are my Favicons",
+                  developerName: "Bryan Colosky",
+                  developerURL: "http://bryancolosky.com/",
+                  background: config.background,
+                  path: 'assets/' + config.path,
+                  url: "http://bryancolosky.com/",
+                  display: "standalone",
+                  orientation: "portrait",
+                  version: 1.0,
+                  logging: false,
+                  online: false,
+                  html: config.html,
+                  replace: true
+              }))
+              .pipe(gulp.dest('assets/' + config.dest));
 
             return this;
         }

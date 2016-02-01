@@ -15,7 +15,7 @@
     }
   ],
   "dependencies": {
-    "favicons": "latest",
+    "gulp-favicons": "latest",
     "gulp": "latest"
   }
 }

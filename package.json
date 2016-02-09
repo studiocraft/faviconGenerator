@@ -1,7 +1,7 @@
 {
   "name": "favicons",
   "version": "1.0.0",
-  "author": "Webcbg <bryan.colosky@webcbg.com>",
+  "author": "Studiocraft <bryan.colosky@studiocraft.cc>",
   "homepage": "http://studiocraft.cc",
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
     }
   ],
   "dependencies": {
-    "gulp-favicons": "latest",
-    "gulp": "latest"
+    "favicons": "latest",
+    "gulp": "latest",
+    "gulp-favicons": "latest"
   }
 }
